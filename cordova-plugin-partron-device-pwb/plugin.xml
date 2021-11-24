@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-partron-device-pwb" version="0.0.1">
+	<name>
+		PartronDevicePWB
+	</name>
+	<js-module name="PartronDevicePWB" src="www/PartronDevicePWB.js">
+		<!-- 웹에서 호출하기 위한, 이름.window.[target] 으로 호출할 수 있다 .   -->
+		<clobbers target="cordova.plugins.partron.device.pwb" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="PartronDevicePWB">
+				<param name="android-package" value="cordova.plugins.partron.device.pwb.PartronDevicePWB" />
+			</feature>
+		</config-file>
+		<config-file mode="merge" parent="/manifest" target="AndroidManifest.xml">
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+			<uses-permission andqroid:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		</config-file>
+		<source-file src="src/android/PartronDevicePWB.java" target-dir="src/cordova/plugins/partron/device/pwb" />
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="PartronDevicePWB">
+				<param name="ios-package" value="PartronDevicePWB" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/PartronDevicePWB.m" />
+	</platform>
+</plugin>

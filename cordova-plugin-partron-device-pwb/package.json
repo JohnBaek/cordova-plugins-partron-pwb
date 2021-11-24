@@ -1,0 +1,19 @@
+{
+	"name": "cordova-plugin-partron-device-pwb",
+	"version": "0.0.1",
+	"description": "cordova plugins for communicate device ( Partron PWB series )",
+	"cordova": {
+		"id": "cordova-plugin-partron-device-pwb",
+		"platforms": [
+			"android",
+			"ios"
+		]
+	},
+	"keywords": [
+		"ecosystem:cordova",
+		"cordova-android",
+		"cordova-ios"
+	],
+	"author": "jinyoung.b@morethani.com",
+	"license": "ISC"
+}
